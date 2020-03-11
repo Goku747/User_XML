@@ -23,9 +23,7 @@ private String password;
 @OneToOne(cascade = CascadeType.ALL)
 @NotFound(action = NotFoundAction.IGNORE)
 private Address address;
-@OneToOne(cascade = CascadeType.ALL)
-@NotFound(action = NotFoundAction.IGNORE)
-private Payment payment;
+
 public Long getId() {
 	return id;
 }
@@ -49,12 +47,6 @@ public Address getAddress() {
 }
 public void setAddress(Address address) {
 	this.address = address;
-}
-public Payment getPayment() {
-	return payment;
-}
-public void setPayment(Payment payment) {
-	this.payment = payment;
 }
 
 }
