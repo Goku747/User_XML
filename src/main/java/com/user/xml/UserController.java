@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 	@Autowired
 	Userservice service;
+	LoginService logservice;
 	
 	@PostMapping("/create")
 	public User createuser(@RequestBody User user) {
@@ -22,4 +23,5 @@ public class UserController {
 	public User viewbyusername(@RequestParam String username) {
 		return service.findByUsername(username);
 	}
+
 }
